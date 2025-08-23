@@ -3947,13 +3947,31 @@ popup-color-options {
     display: flex;
     flex-direction: column-reverse;
   }
+  .banner-content {
+    margin: 2rem  1rem;
+    text-align: center;
+  }
   .banner-inner-content {
     grid-template-columns: 1fr;
     text-align: center;
   }
   .banner-buttons{
-    display: flex;
-    justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        width: 41%;
+        position: absolute;
+        left: 108px;
+        margin-top: 6rem;
   }
+  .banner-footer-text{
+    font-size: 12px;
+   
+  }
+
   
+}
+
+#popup-size {
+  width: 100%;
+  padding: 12px;
 }
