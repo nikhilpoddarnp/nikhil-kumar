@@ -1,0 +1,50 @@
+<section class="product-grid">
+  <h2 class="product-grid-title">Tisso vison in the wild</h2>
+
+  <div class="grid">
+    {% assign collection = collections.all %}
+
+    {% if collection and collection.products.size > 0 %}
+      {% for product in collection.products %}
+        <div class="product-card" data-handle="{{ product.handle }}">
+          <img
+            src="{{ product.featured_image | image_url: width: 433, height: 444 }}"
+            alt="{{ product.title }}"
+            width="100%"
+            height="100%"
+          >
+        </div>
+      {% endfor %}
+    {% else %}
+      <p>No products found.</p>
+    {% endif %}
+  </div>
+
+  <!-- Popup (hidden initially) -->
+  <div id="product-popup" class="popup hidden">
+    <div class="popup-content">
+      <button id="popup-close" class="popup-close">×</button>
+      <div id="popup-content-inner">
+        <!-- Product details will be injected here -->
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Product Grid",
+  "settings": [
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Select a collection"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product Grid"
+    }
+  ]
+}
+{% endschema %}
