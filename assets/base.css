@@ -3596,12 +3596,6 @@ details-disclosure > details {
   }
 }
 
-
-
-
-
-/* Top info bar */
-/* Top bar */
 .top-bar {
   background: #f9f9f9;
   font-size: 14px;
@@ -3686,16 +3680,8 @@ vertical-align: middle;
   
 }
 
-/* Product Card */
-/* .product-card {
-  text-align: center;
-  border: 1px solid #eee;
-  padding: 1rem;
-  background: #fff;
-  transition: box-shadow 0.3s ease;
-} */
+
 .product-card:hover {
-  /* box-shadow: 0 4px 12px rgba(0,0,0,0.1); */
   cursor: pointer;
 }
 
@@ -3834,7 +3820,7 @@ vertical-align: middle;
   margin:3.5rem 0 ;
 
 }
-/* ✅ Mobile & Tablet Responsive Styles */
+/* Mobile & Tablet Responsive Styles */
 @media (max-width: 1024px) {
   .banner-content {
     margin-left: 5rem; /* Reduce side margin */
@@ -3888,8 +3874,7 @@ padding: 0px;
 }
 
 .banner-footer-text{
-  /* font-family: Lustria; */
-  font-family: Jost;
+font-family: Jost;
 font-weight: 400;
 font-style: Regular;
 font-size: 22px;
@@ -3907,10 +3892,6 @@ popup-color-options {
   display: flex;
   gap: 8px;
 }
-
-
-
-
 
 #popup-size option:hover {
   background: #000;
