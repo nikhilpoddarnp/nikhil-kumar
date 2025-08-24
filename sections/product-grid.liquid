@@ -5,7 +5,7 @@
     {% assign collection = collections.all %}
 
     {% if collection and collection.products.size > 0 %}
-      {% for product in collection.products %}
+      {% for product in collection.products limit:6 %}
         <div class="product-card" data-handle="{{ product.handle }}">
           <img
             src="{{ product.featured_image | image_url: width: 433, height: 444 }}"
