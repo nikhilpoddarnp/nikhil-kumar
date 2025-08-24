@@ -1,0 +1,46 @@
+<section class="banner">
+  <div class="banner-inner container">
+    <!-- Banner Images -->
+    <div class="banner-images">
+      <img src="{{ 'banner1.svg' | asset_url }}" alt="Banner Background" class="banner-bg" width="1000">
+    </div>
+
+    <!-- Banner Content -->
+  </div>
+  <div class="banner-inner-content container">
+    <div class="banner-content">
+      <h1 class="banner-heading">{{ section.settings.heading }}</h1>
+      <p class="banner-subheading">{{ section.settings.description }}</p>
+
+      <div class="banner-buttons">
+        <a href="{{ section.settings.primary_btn_link }}" class="btn btn-primary">
+          {{ section.settings.primary_btn_text }}
+        </a>
+      </div>
+    </div>
+    <div class="banner-frame-container">
+      <img src="{{ 'banner2.svg' | asset_url }}" alt="Banner Frame" class="banner-frame" width="1000">
+    </div>
+  </div>
+</section>
+<div class="banner-footer">
+  <p class="banner-footer-text">SUSTAINABLE, ETHICALLY MADE CLOTHES IN SIZES XXS TO 6XL</p>
+</div>
+
+{% schema %}
+{
+  "name": "Banner",
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Heading", "default": "The Gift Guide" },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+      "default": "Discover Joy: Your Ultimate Holiday Gift Destination."
+    },
+    { "type": "text", "id": "primary_btn_text", "label": "Primary Button Text", "default": "Shop Now" },
+    { "type": "url", "id": "primary_btn_link", "label": "Primary Button Link", "default": "/collections/all" }
+  ],
+  "presets": [{ "name": "Banner" }]
+}
+{% endschema %}
