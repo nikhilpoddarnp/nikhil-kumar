@@ -3609,7 +3609,7 @@ details-disclosure > details {
   margin: 0;
 }
 
-.btn-choose {
+.btn-choose, .btn-choose-mobile {
   background: #f1c40f;
   padding: 0.5rem 1rem;
   font-weight: bold;
@@ -3918,7 +3918,7 @@ popup-color-options {
 .color-swatch {
   width: 10px;
   height: 100%;
-  border: 1px solid #000;
+  border-right: 1px solid #000;
   display: inline-block;
 }
 
@@ -3926,13 +3926,26 @@ popup-color-options {
   display: flex;
   gap: 8px;
 }
+.size-select {
+  padding: 8px;
+  font-size: 16px;
+}
 
+/* .size-select option:checked {
+  background-color: #000 !important; 
+  color: white;              
+}
+
+.size-select option:hover{
+  background-color: #000 !important; 
+  color: white;               
+}*/
 .popup.hidden { display: none; }
 .popup { position: fixed; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,.6); z-index: 9999; }
 .popup-content { background: #fff; width: 42rem; max-width: 42rem; padding: 16px; position: relative; }
 .popup-close { position: absolute; top: 8px; right: 12px; font-size: 20px; background: none; border: 0; cursor: pointer; }
 .popup-product { display: grid; grid-template-columns: 160px 1fr; gap: 16px; padding: 2rem 0rem; }
-.popup-left img { width: 160px; height: auto; display: block; }
+.popup-left img { width: 160px; height: 180px; display: block; }
 .popup-title { margin: 0 0 6px; font-size: 18px; }
 .popup-price { font-weight: 600; margin-bottom: 8px; }
 .popup-desc { font-size: 14px; line-height: 1.4; max-height: 120px; overflow: auto; margin-bottom: 12px; }
@@ -3966,6 +3979,24 @@ popup-color-options {
   .banner-footer-text{
     font-size: 12px;
    
+  }
+
+  
+}
+
+
+@media screen and (max-width: 1600px) {
+
+ .banner-subheading, .banner-heading{
+  font-size: larger;
+ }
+ 
+  
+  .banner-buttons{
+       font-size: larger;
+  }
+  .banner-footer-text{
+    font-size: larger;
   }
 
   

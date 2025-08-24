@@ -128,7 +128,7 @@
                 ? `
               <label>
                 Size
-                <select id="popup-size">
+                <select id="popup-size" class="size-select">
                 <option value="" selected>Choose your size</option>
                   ${variantSizeOptions
                     .map(
