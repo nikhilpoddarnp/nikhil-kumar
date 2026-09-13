@@ -39,12 +39,12 @@
               class="announcement-bar__link link link--text focus-inset animate-arrow"
             >
           {%- endif -%}
-          <p class="announcement-bar__message h5">
+          {% comment %} <p class="announcement-bar__message h5">
             <span>{{ section.blocks.first.settings.text | escape }}</span>
             {%- if section.blocks.first.settings.link != blank -%}
               {{- 'icon-arrow.svg' | inline_asset_content -}}
             {%- endif -%}
-          </p>
+          </p> {% endcomment %}
           {%- if section.blocks.first.settings.link != blank -%}
             </a>
           {%- endif -%}
@@ -99,12 +99,12 @@
                         class="announcement-bar__link link link--text focus-inset animate-arrow"
                       >
                     {%- endif -%}
-                    <p class="announcement-bar__message h5">
+                    {% comment %} <p class="announcement-bar__message h5">
                       <span>{{ block.settings.text | escape }}</span>
                       {%- if block.settings.link != blank -%}
                         {{- 'icon-arrow.svg' | inline_asset_content -}}
                       {%- endif -%}
-                    </p>
+                    </p> {% endcomment %}
                     {%- if block.settings.link != blank -%}
                       </a>
                     {%- endif -%}
